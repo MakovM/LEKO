@@ -1,0 +1,51 @@
+{% extends 'lib/base.html' %}
+{% block title %}{{ lib.title }}{% endblock %}
+  {% block content%}
+<!--suppress ALL -->
+<div class="back"><a href="/"> ← Назад</a></div>
+<div class="pi_all">
+
+  <div class="im">
+  <img src="{{ lib.photo.url }}" alt="" class="p-a-p">
+  </div>
+  <div class="an">
+    <ul class="t-d">
+      <li class="tit">{{ lib.title }}</li>
+      <li class="pri">{{ lib.price }}<span class="price-s"> /1м<sup><small>3</small></sup></span> </li>
+      <li class="by"><button id="buuy" class="buuy"
+      data-name=" {{ lib.title }}"
+            data-price="{{ lib.price }}">
+              Замовити</button></li>
+      <li class="avail">{{ lib.availability}}</li>
+      <li class="cont">Також робимо під замовлення потрібні вам розміри</li>
+
+
+    </ul>
+  </div>
+</div>
+<div class="zam">
+  <button class="add-c-bu"></button>
+  <div class="f">
+  <h3>Ваше замовлення:</h3>
+  </div>
+<form action="{% url 'save' %}" class="bask_add" id="form_product" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="bask-tov">
+  <img class="busk-img" src="{{ lib.photo.url }}" alt="">
+  <label>{{ lib.title }}</label>
+  <input class="kls" type="number" min="0" max="100" value="0" step="any"><span class="span">.шт</span>
+  <label id="pri" data-price="{{ lib.price }}">{{ lib.price }}</label>
+</div>
+  <div class="tt-pr">
+<label id="total_price"></label>
+  </div>
+  <input class="inp-ba" id="in" name="tit" placeholder="Ваше ім'я"> <br>
+  <input class="inp-ba" id="it" type="tel" name="phone" placeholder="Введіть номер телефону" pattern="[0-9()+-]*" required>
+
+  <div class="button-add">
+    <button type="submit" id="sbtn" class="send-btn" value="Submit">
+     Надіслати</button></div>
+</form>
+</div>
+
+  {% endblock%}
