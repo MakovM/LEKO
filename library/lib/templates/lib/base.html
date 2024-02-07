@@ -13,27 +13,30 @@
     <link href="{% static 'lib/css/base.css' %}" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="{% static 'lib/js/base.js' %}"></script>
+
+
 <body>
 
-<div class="header">
+<header class="header">
     <div class="l-n">
         <a class="lm" href="/"><h2>LEKO</h2></a>
     </div>
     <nav class="btn-link">
         <ul class="link">
             <li><a class="link-s" href="">Дрова</a></li>
-            <li><a class="link-s" href="">Пиломатеріали</a></li>
-            <li><a class="link-s" href="#footer">Контакти</a></li>
+            <li><a class="link-s" href="#products">Пиломатеріали</a></li>
+            <li><a class="link-s" href="#contact">Контакти</a></li>
         </ul>
     </nav>
-    <div class="t-n">
-        <a class="tm" href="/">+380669378883</a>
-    </div></div>
+</header>
     {% block content%}
 
         {% endblock%}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="{% static 'lib/js/base.js' %}"></script>
 </body>
 </html>
