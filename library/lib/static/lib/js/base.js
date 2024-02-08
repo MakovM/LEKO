@@ -8,6 +8,18 @@ new Swiper('.image-slider',{
       scrollbar: {
     el: '.swiper-scrollbar',
   },
+    breakpoints: {
+
+          835:{
+              slidesPerView: 3,
+          },
+          612:{
+              slidesPerView: 2,
+          },
+          320:{
+              slidesPerView: 1,
+          }
+    }
 });
 $(document).ready(function () {
 
