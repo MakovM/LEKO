@@ -452,8 +452,8 @@ h2{
     transition: all 0s;
 }
 .form-container{
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
 }
 .za.active{
     top: 25%;
@@ -465,17 +465,20 @@ h2{
     display: block;
     border: 3px darkblue solid;
 }
-.add-c-bu, .add-z-bu{
-    background: url("../img/x.svg") center / cover no-repeat ;
-    width: 7%;
-    height: 7%;
-    border: none;
-    filter: invert(0);
-    margin-top: 15px;
-    margin-right: 10px;
-    left: 90%;
-    position: relative;
+.close-btn{
+    width: 95%;
+    margin: 0 auto;
+    text-align: right;
 }
+.bi-x{
+    width: 24px;
+    height: 24px;
+}
+.add-c-bu, .add-z-bu{
+    color: darkblue;
+    cursor: pointer;
+}
+
 .b-input{
     display: grid;
     place-items: center;
@@ -516,6 +519,9 @@ h2{
     padding: 10px 50px;
     position: relative;
     margin-top: 5%;
+}
+.basket-close{
+    margin-top: 20px;
 }
 .bask-tov{
     width: 90%;
