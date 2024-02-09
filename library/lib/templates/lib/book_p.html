@@ -23,6 +23,7 @@
     </ul>
   </div>
 </div>
+<div class="form-container">
 <div class="zam">
   <button class="add-c-bu"></button>
   <div class="f">
@@ -33,8 +34,8 @@
   <div class="bask-tov">
   <img class="busk-img" src="{{ lib.photo.url }}" alt="">
   <label>{{ lib.title }}</label>
-  <input class="kls" type="number" min="0" max="100" value="0" step="any"><span class="span">.шт</span>
-  <label id="pri" data-price="{{ lib.price }}">{{ lib.price }}</label>
+  <input class="kls" type="number" min="0" max="100" value="0" step="any">
+    <label id="pri" data-price="{{ lib.price }}">{{ lib.price }}</label>
 </div>
   <div class="tt-pr">
 <label id="total_price"></label>
@@ -47,6 +48,7 @@
     <button type="submit" id="sbtn" class="send-btn" value="Submit">
      Надіслати</button></div>
 </form>
+</div>
 </div>
 
   {% endblock%}
